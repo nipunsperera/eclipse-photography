@@ -1,0 +1,20 @@
+#apLogin{
+    -fx-background-color: rgb(0,0,0);
+    -fx-background-radius: 25;
+}
+
+#apBack{
+    -fx-background-color: #94CEF8;
+    -fx-border-width: 50;
+}
+
+#btnLogin {
+    -fx-background-color: #0D99FF;
+    -fx-font-family: "Cantarell Extra Bold";
+
+
+}
+#btnRegister{
+    -fx-background-color: #0D99FF;
+    -fx-font-family: "Cantarell Extra Bold";
+}
