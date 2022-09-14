@@ -1,3 +1,6 @@
 lk/eclipse/AppInitializer.class
+lk/eclipse/exception/BlankFieldException.class
 lk/eclipse/controller/AdminFormController.class
 lk/eclipse/controller/LoginFormController.class
+lk/eclipse/exception/InvalidFieldException.class
+lk/eclipse/exception/InvalidRoleException.class
