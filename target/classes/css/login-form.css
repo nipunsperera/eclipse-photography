@@ -7,14 +7,12 @@
     -fx-background-color: #94CEF8;
 }
 
-#btnLogin {
-    -fx-background-color: #0D99FF;
-    -fx-font-family: "Cantarell Extra Bold";
-
-
-}
-#btnRegister{
+#btnLogin,#btnRegister{
     -fx-background-color: #0D99FF;
     -fx-font-family: "Cantarell Extra Bold";
 }
 
+#btnLogin:hover,#btnRegister:hover{
+    -fx-background-color: rgb(255,255,255);
+
+}

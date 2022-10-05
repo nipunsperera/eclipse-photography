@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apBack" prefHeight="650.0" prefWidth="600.0" stylesheets="@../css/register-form.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.eclipse.controller.RegisterFormController">
+   <children>
+      <AnchorPane fx:id="apBanner" layoutY="-1.0" prefHeight="110.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="110.0" fitWidth="238.0" layoutX="202.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="203.0" layoutY="64.0" prefHeight="34.0" prefWidth="195.0" text="Register a new user" textFill="WHITE">
+               <font>
+                  <Font name="Cantarell Extra Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="66.0" layoutY="170.0" spacing="20.0">
+         <children>
+            <VBox spacing="39.0">
+               <children>
+                  <Label text="First Name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Last Name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Contact No:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Role:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Password:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Re-Enter Password:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox spacing="39.0">
+               <children>
+                  <TextField prefHeight="26.0" prefWidth="285.0" />
+                  <TextField prefHeight="26.0" prefWidth="285.0" />
+                  <TextField prefHeight="26.0" prefWidth="285.0" />
+                  <ComboBox fx:id="cmbRole" prefHeight="26.0" prefWidth="284.0" />
+                  <TextField prefHeight="26.0" prefWidth="285.0" />
+                  <TextField prefHeight="26.0" prefWidth="285.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <JFXButton fx:id="btnRegister" layoutX="369.0" layoutY="561.0" onAction="#btnRegisterOnAction" prefHeight="45.0" prefWidth="166.0" text="REGISTER" />
+      <JFXButton fx:id="btnBack" layoutX="66.0" layoutY="561.0" onAction="#btnBackOnAction" prefHeight="45.0" prefWidth="166.0" text="Back" />
+   </children>
+</AnchorPane>

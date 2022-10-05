@@ -1,6 +1,7 @@
 lk/eclipse/AppInitializer.class
 lk/eclipse/exception/BlankFieldException.class
 lk/eclipse/controller/EditorFormController.class
+lk/eclipse/controller/RegisterFormController.class
 lk/eclipse/security/SecurityContextHolder.class
 lk/eclipse/exception/InvalidFieldException.class
 lk/eclipse/controller/PhotographerFormController.class

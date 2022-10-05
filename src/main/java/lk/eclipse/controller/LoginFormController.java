@@ -43,7 +43,16 @@ public class LoginFormController {
 
     }
 
-    public void btnRegisterOnAction(ActionEvent actionEvent) {
+    public void btnRegisterOnAction(ActionEvent actionEvent) throws IOException {
+        Scene scene = new Scene(FXMLLoader.load(this.getClass().getResource("/view/RegisterForm.fxml")));
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Register User");
+        stage.setResizable(false);
+        stage.show();
+        stage.centerOnScreen();
+        btnLogin.getScene().getWindow().hide();
+
     }
 
     public void btnLoginOnAction(ActionEvent actionEvent) {

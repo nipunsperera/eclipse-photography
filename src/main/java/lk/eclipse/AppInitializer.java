@@ -21,7 +21,7 @@ public class AppInitializer extends Application {
         Parent container = FXMLLoader.load(resource);
         Scene scene = new Scene(container);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Login Form");
+        primaryStage.setTitle("Eclipse Photography");
         primaryStage.setResizable(false);
         primaryStage.show();
         primaryStage.centerOnScreen();
