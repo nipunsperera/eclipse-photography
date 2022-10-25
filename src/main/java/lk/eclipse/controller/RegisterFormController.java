@@ -25,6 +25,7 @@ public class RegisterFormController {
     public TextField txtContact;
     public PasswordField txtPassword;
     public PasswordField txtPassword2;
+    public TextField txtUsername;
 
     public void initialize(){
         try {
@@ -48,25 +49,29 @@ public class RegisterFormController {
             new Alert(Alert.AlertType.ERROR, "Please Enter a valid name").showAndWait();
             txtFirstName.requestFocus();
             return;
-        } else if (!txtLastName.getText().matches("[A-Za-z]+")) {
+        }else if (!txtLastName.getText().matches("[A-Za-z]+")) {
             new Alert(Alert.AlertType.ERROR, "Please Enter a valid name").showAndWait();
             txtFirstName.requestFocus();
             return;
 
-        } else if (!txtContact.getText().matches("^\\d{3}-\\d{7}$")) {
+        }else if (!txtContact.getText().matches("^\\d{3}-\\d{7}$")) {
             new Alert(Alert.AlertType.ERROR, "Please Enter a valid contact number").showAndWait();
             txtContact.requestFocus();
             return;
 
+        }else if(!txtUsername.getText().matches("[A-Za-z1-9@_]{6,}")) {
+            new Alert(Alert.AlertType.ERROR, "Please Enter a valid username").showAndWait();
+            txtUsername.requestFocus();
+            return;
         }else if(cmbRole.getValue()==null){
             new Alert(Alert.AlertType.ERROR, "Please Select a role").showAndWait();
             cmbRole.requestFocus();
             return;
-        } else if (!txtPassword.getText().matches("[A-Za-z1-9.@_]{6,}")) {
+        }else if (!txtPassword.getText().matches("[A-Za-z1-9.@_]{6,}")) {
             new Alert(Alert.AlertType.ERROR, "Please Enter a valid password with minimum 6 characters").showAndWait();
             txtPassword.requestFocus();
             return;
-        } else if (!txtPassword.getText().equals(txtPassword2.getText())) {
+        }else if (!txtPassword.getText().equals(txtPassword2.getText())) {
             new Alert(Alert.AlertType.ERROR, "Password is not matched").showAndWait();
             txtPassword2.requestFocus();
             return;
@@ -74,13 +79,14 @@ public class RegisterFormController {
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/eclipse_db", "root", "Nipun@96");
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO Register (f_name,l_name,contact,role_user,password1,password2) VALUES (?,?,?,?,?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO Register (f_name,l_name,username,contact,role_user,password1,password2) VALUES (?,?,?,?,?,?,?)");
             preparedStatement.setString(1,txtFirstName.getText());
             preparedStatement.setString(2,txtLastName.getText());
-            preparedStatement.setString(3,txtContact.getText());
-            preparedStatement.setString(4,cmbRole.valueProperty().getName());
-            preparedStatement.setString(5,txtPassword.getText());
-            preparedStatement.setString(6,txtPassword2.getText());
+            preparedStatement.setString(3,txtUsername.getText());
+            preparedStatement.setString(4,txtContact.getText());
+            preparedStatement.setString(5,cmbRole.valueProperty().getName());
+            preparedStatement.setString(6,txtPassword.getText());
+            preparedStatement.setString(7,txtPassword2.getText());
             int i = preparedStatement.executeUpdate();
             System.out.println(i);
             new Alert(Alert.AlertType.INFORMATION,"Registered Successfully !").showAndWait();
@@ -90,6 +96,8 @@ public class RegisterFormController {
             cmbRole.getSelectionModel().clearSelection();
             txtPassword.clear();
             txtPassword2.clear();
+            txtUsername.clear();
+            txtFirstName.requestFocus();
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR,"Cannot connect with the database").showAndWait();
             e.printStackTrace();
