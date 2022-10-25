@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/cecaeb3c-278e-4be1-b1c2-e14f3afa6edb/console.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lk/eclipse/controller/RegisterFormController.java" dialect="GenericSQL" />
+  </component>
+</project>

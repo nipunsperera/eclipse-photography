@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -65,12 +66,12 @@
             </VBox>
             <VBox spacing="39.0">
                <children>
-                  <TextField prefHeight="26.0" prefWidth="285.0" />
-                  <TextField prefHeight="26.0" prefWidth="285.0" />
-                  <TextField prefHeight="26.0" prefWidth="285.0" />
+                  <TextField fx:id="txtFirstName" prefHeight="26.0" prefWidth="285.0" promptText="Nipun" />
+                  <TextField fx:id="txtLastName" prefHeight="26.0" prefWidth="285.0" promptText="Perera" />
+                  <TextField fx:id="txtContact" prefHeight="26.0" prefWidth="285.0" promptText="077-4456270" />
                   <ComboBox fx:id="cmbRole" prefHeight="26.0" prefWidth="284.0" />
-                  <TextField prefHeight="26.0" prefWidth="285.0" />
-                  <TextField prefHeight="26.0" prefWidth="285.0" />
+                  <PasswordField fx:id="txtPassword" promptText="Minimum 6 charactors" />
+                  <PasswordField fx:id="txtPassword2" promptText="Re-Enter Password" />
                </children>
             </VBox>
          </children>
