@@ -1,4 +1,8 @@
 lk/eclipse/AppInitializer.class
+lk/eclipse/controller/LoginFormController.class
+lk/eclipse/controller/AddNewBookingFormController.class
+lk/eclipse/security/User.class
+lk/eclipse/controller/BookingManagementController.class
 lk/eclipse/exception/BlankFieldException.class
 lk/eclipse/controller/EditorFormController.class
 lk/eclipse/controller/RegisterFormController.class
@@ -7,6 +11,4 @@ lk/eclipse/exception/InvalidFieldException.class
 lk/eclipse/controller/PhotographerFormController.class
 lk/eclipse/security/UserRole.class
 lk/eclipse/controller/AdminFormController.class
-lk/eclipse/controller/LoginFormController.class
 lk/eclipse/exception/InvalidRoleException.class
-lk/eclipse/security/User.class

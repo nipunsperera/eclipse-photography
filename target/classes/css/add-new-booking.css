@@ -1,0 +1,16 @@
+#appBanner{
+    -fx-background-color: rgb(0,0,0);
+}
+
+#btnLogout{
+    -fx-background-color: #FFA629;
+    -fx-font-family: "Cantarell Extra Bold";
+}
+
+#appBack{
+    -fx-background-color: #94CEF8;
+}
+#btnBack{
+    -fx-background-color: #0D99FF;
+    -fx-font-family: "Cantarell Extra Bold";
+}
